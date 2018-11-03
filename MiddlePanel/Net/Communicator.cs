@@ -181,7 +181,6 @@ namespace MiddlePanel.Net
             string packageContent = System.Text.Encoding.ASCII.GetString(package.Package);
             //"{\"h\":{\"s\":\"VIT\",\"d\":\"INS\",\"t\":3.016369},\"p\":{\"vp\":100.000000,\"vy\":4.000000}}"
 
-            #region 1ms
             int beginIndex = packageContent.IndexOf("\"p\":{") + 5;
             packageContent = packageContent.Remove(0, beginIndex);
             packageContent = packageContent.Remove(packageContent.Length - 2);
@@ -200,7 +199,6 @@ namespace MiddlePanel.Net
                     Console.WriteLine("Bad parameter '{0}' value: {1}", tempArray[0], tempArray[1]);
                 }
             }
-            #endregion
 
 
             return inputParameters;
